@@ -30,16 +30,15 @@ function slicer(data,aspect)
         fprintf('The program will automatically use absolute data.\n');
         data = abs(data);
     end
-
+    
+    egg=0;
     if nargin < 2
         aspect=[1,1,1];
-        egg=0;
     elseif ischar(aspect) && strcmp(aspect,[char(80),char(86)])
         aspect=[1,1,1];
         egg=1;
     elseif length(aspect)<3
         aspect=[1,1,1];
-        egg=0;
     end
 
     dim=size(data);
